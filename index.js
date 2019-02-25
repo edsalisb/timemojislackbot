@@ -78,6 +78,36 @@ app.post('/emojis', function(req, res, next){
     
 })
 
+app.post('/timbow', function(req, res, next){
+
+    const text = `
+        :timbow_001::timbow_002::timbow_003:
+        :timbow_004::timbow_005::timbow_006:
+        :timbow_007::timbow_008::timbow_009:
+        :timbow_010::timbow_011::timbow_012:
+        :timbow_013::timbow_014::timbow_015:
+    `
+
+    const requestOptions = {
+        url: req.body.response_url,
+        json: {
+            'response_type': 'in_channel',
+            'text': text
+        },
+        headers: {
+            'Content_Type': 'application/json'
+        }
+    }
+
+    request.post(requestOptions, function(err, response){
+        if (err){
+            res.status(500).send({err: err});
+            return;
+        }
+        res.status(200).end()
+    })
+})
+
 app.listen(port, () => {
     console.log('App listening on port: ' + port)
 })
