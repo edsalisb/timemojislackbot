@@ -98,6 +98,8 @@ app.post('/timbow', function(req, res, next){
             'Content_Type': 'application/json'
         }
     }
+    console.log('BODY', req.body);
+    console.log('REQUEST OPTIONS', requestOptions)
 
     request.post(requestOptions, function(err, response){
         if (err){
