@@ -80,12 +80,7 @@ app.post('/emojis', function(req, res, next){
 
 app.post('/timbow', function(req, res, next){
 
-    const text = `:timbow_001::timbow_002::timbow_003:
-        :timbow_004::timbow_005::timbow_006:
-        :timbow_007::timbow_008::timbow_009:
-        :timbow_010::timbow_011::timbow_012:
-        :timbow_013::timbow_014::timbow_015:
-    `
+    const text = `A beautiful Timbow :rainbow:\r\n:timbow_001::timbow_002::timbow_003:\r\n:timbow_004::timbow_005::timbow_006:\r\n:timbow_007::timbow_008::timbow_009:\r\n:timbow_010::timbow_011::timbow_012:\r\n:timbow_013::timbow_014::timbow_015:`
 
     const requestOptions = {
         url: req.body.response_url,
