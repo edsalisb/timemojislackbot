@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 app.use('/', bodyParser.json());
-app.use('/emojis', bodyParser.urlencoded({extend: false}));
+app.use(bodyParser.urlencoded({extend: false}));
 
 app.get('/', function(req, res){
     res.status(200).send({message: 'success'});
@@ -98,8 +98,6 @@ app.post('/timbow', function(req, res, next){
             'Content_Type': 'application/json'
         }
     }
-    console.log('BODY', req.body);
-    console.log('REQUEST OPTIONS', requestOptions)
 
     request.post(requestOptions, function(err, response){
         if (err){
