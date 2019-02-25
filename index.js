@@ -101,6 +101,7 @@ app.post('/timbow', function(req, res, next){
 
     request.post(requestOptions, function(err, response){
         if (err){
+            console.error('Error calling /timbow', err);
             res.status(500).send({err: err});
             return;
         }
