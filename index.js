@@ -64,7 +64,7 @@ app.post('/emojis', function(req, res, next){
             'Content_Type': 'application/json'
         }
     }
-
+    console.log('REQUEST BODY', req.body)
     request.post(requestOptions, function(err, response){
         if (err){
             res.status(500).send({err: err});
