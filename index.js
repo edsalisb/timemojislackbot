@@ -54,8 +54,9 @@ app.post('/emojis', function(req, res, next){
         ':timmy2:',
         ':trippytim:',
     ]
+    
     const requestOptions = {
-        url: req.body.request_url,
+        url: req.body.response_url,
         json: {
             'response_type': 'in_channel',
             'text': `${EMOJIS.join(' ')}` 
