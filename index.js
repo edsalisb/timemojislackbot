@@ -5,7 +5,9 @@ const request = require('request');
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(bodyParser.urlencoded({extend: true}));
+app.use('/', bodyParser.json());
+app.use('/emojis', bodyParser.urlencoded({extend: true}));
+
 app.get('/', function(req, res){
     res.status(200).send({message: 'success'});
 })
