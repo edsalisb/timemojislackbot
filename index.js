@@ -54,7 +54,7 @@ app.post('/emojis', function(req, res, next){
         ':timmy2:',
         ':trippytim:',
     ]
-    
+
     const requestOptions = {
         url: req.body.response_url,
         json: {
@@ -71,7 +71,7 @@ app.post('/emojis', function(req, res, next){
             res.status(500).send({err: err});
             return;
         }
-        res.status(200).send({});
+        res.status(200)
     })
     
 })
