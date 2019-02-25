@@ -71,7 +71,7 @@ app.post('/emojis', function(req, res, next){
             res.status(500).send({err: err});
             return;
         }
-        res.status(200)
+        res.status(200).end()
     })
     
 })
