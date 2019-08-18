@@ -9,7 +9,7 @@ app.use('/', bodyParser.json());
 app.use(bodyParser.urlencoded({extend: false}));
 
 app.get('/', function(req, res){
-    res.status(200).send({message: 'success'});
+    res.status(200).send();
 })
 
 app.post('/emojis', function(req, res, next){
